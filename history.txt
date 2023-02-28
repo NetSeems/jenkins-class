@@ -1,29 +1,37 @@
-    1  git clone https://github.com/NetSeems/Jenkins-cicd.git
-    2  cd Jenkins-cicd/
-    3  ll
-    4  git switch create_ec2_tf 
-    5  chmod 755 jenkins-installation-ubuntu.sh 
-    6  ll
-    7  sh jenkins-installation-ubuntu.sh 
-    8  sudo systemctl enable jenkins
-    9  sudo systemctl start jenkins
-   10  sudo systemctl status jenkins
-   11  sudo systemctl enable jenkins
-   12  sudo systemctl status jenkins
-   13  sudo cat /var/lib/jenkins/secrets/initialAdminPassword
-   14  mvn --version
-   15  mvn archetype:generate -DgroupId=com.mycompany.app -DartifactId=my-app -DarchetypeArtifactId=maven-archetype-quickstart -DarchetypeVersion=1.4 -DinteractiveMode=false
-   16  sudo apt install tree
-   17  ls
-   18  ll
-   19  ssh-keygen
-   20  cd ~/.ssh/
-   21  ll
-   22  cat id_rsa.pub 
-   23  cd ..
-   24  git clone git@github.com:NetSeems/jenkins-class.git
-   25  ll
-   26  git status
-   27  touch history.txt
-   28  ll
-   29  history > history.txt 
+git clone https://github.com/NetSeems/Jenkins-cicd.git
+cd Jenkins-cicd/
+ll
+git switch create_ec2_tf 
+chmod 755 jenkins-installation-ubuntu.sh 
+ll
+sh jenkins-installation-ubuntu.sh 
+sudo systemctl enable jenkins
+sudo systemctl start jenkins
+sudo systemctl status jenkins
+sudo systemctl enable jenkins
+sudo systemctl status jenkins
+sudo cat /var/lib/jenkins/secrets/initialAdminPassword
+mvn --version
+mvn archetype:generate -DgroupId=com.mycompany.app -DartifactId=my-app -DarchetypeArtifactId=maven-archetype-quickstart -DarchetypeVersion=1.4 -DinteractiveMode=false
+sudo apt install tree
+ls
+ll
+ssh-keygen
+cd ~/.ssh/
+ll
+cat id_rsa.pub 
+cd ..
+git clone git@github.com:NetSeems/jenkins-class.git
+ll
+git status
+touch history.txt
+ll
+history > history.txt 
+cat history.txt 
+git status
+git add history.txt 
+git status
+git commit -am "added history file"
+git status
+git push
+history | cut -c 8- > history.txt 
